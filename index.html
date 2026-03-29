@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skyline Web Studio | Premium Web Design SA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .navy-bg { background-color: #0f172a; }
+        .accent-blue { color: #3b82f6; }
+        .bg-accent-blue { background-color: #3b82f6; }
+        .glass { background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(10px); }
+        .page-section { display: none; }
+        .page-section.active { display: block; animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        #preview-modal { display: none; position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,0.9); }
+        
+        /* Mobile Menu Styles */
+        #mobile-menu { display: none; }
+        #mobile-menu.active { display: block; animation: fadeIn 0.3s ease-out; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full z-50 glass border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center cursor-pointer" onclick="showPage('home')">
+                    <span class="text-xl md:text-2xl font-bold text-white tracking-tight">SKYLINE<span class="accent-blue">WEB STUDIO</span></span>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center text-sm font-medium text-slate-300">
+                    <a href="javascript:void(0)" onclick="showPage('home')" class="hover:text-blue-400 transition">Home</a>
+                    <a href="javascript:void(0)" onclick="showPage('services')" class="hover:text-blue-400 transition">Services</a>
+                    <a href="javascript:void(0)" onclick="showPage('pricing')" class="hover:text-blue-400 transition">Pricing</a>
+                    <a href="javascript:void(0)" onclick="showPage('portfolio')" class="hover:text-blue-400 transition">Portfolio</a>
+                    <a href="javascript:void(0)" onclick="showPage('about')" class="hover:text-blue-400 transition">About</a>
+                    <a href="javascript:void(0)" onclick="showPage('contact')" class="bg-accent-blue text-white px-6 py-2 rounded-full hover:bg-blue-600 transition">Get a Quote</a>
+                </div>
+                <!-- Mobile Menu Icon (The fix starts here) -->
+                <div class="md:hidden text-white cursor-pointer p-2" onclick="toggleMobileMenu()">
+                    <i data-lucide="menu" id="menu-icon"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- ACTUAL MOBILE MENU OVERLAY (The missing part) -->
+        <div id="mobile-menu" class="md:hidden glass border-b border-slate-800 absolute w-full left-0 top-20 z-40">
+            <div class="flex flex-col p-6 space-y-4 text-slate-300 font-medium">
+                <a href="javascript:void(0)" onclick="showPage('home'); toggleMobileMenu()" class="hover:text-white">Home</a>
+                <a href="javascript:void(0)" onclick="showPage('services'); toggleMobileMenu()" class="hover:text-white">Services</a>
+                <a href="javascript:void(0)" onclick="showPage('pricing'); toggleMobileMenu()" class="hover:text-white">Pricing</a>
+                <a href="javascript:void(0)" onclick="showPage('portfolio'); toggleMobileMenu()" class="hover:text-white">Portfolio</a>
+                <a href="javascript:void(0)" onclick="showPage('about'); toggleMobileMenu()" class="hover:text-white">About</a>
+                <a href="javascript:void(0)" onclick="showPage('contact'); toggleMobileMenu()" class="bg-accent-blue text-white p-3 rounded-lg text-center">Get a Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. HOME PAGE SECTION -->
+    <main id="home" class="page-section active">
+        <section class="navy-bg pt-40 pb-24 px-4">
+            <div class="max-w-7xl mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+                    Modern Websites That Turn Your <br> <span class="accent-blue">Small Business Into A Big Brand.</span>
+                </h1>
+                <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10">
+                    Professional, high-speed, and mobile-ready websites for South African entrepreneurs. Starting from only <span class="text-white font-bold">R3,000</span>.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button onclick="showPage('contact')" class="bg-accent-blue text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-600 transition">Get a Quote</button>
+                    <button onclick="showPage('portfolio')" class="border border-slate-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-slate-800 transition">View Portfolio</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Section -->
+        <section class="py-12 bg-white border-b border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
+                <div class="flex flex-col items-center"><i data-lucide="zap" class="accent-blue mb-2"></i><span class="text-xs font-bold text-slate-500 uppercase">Fast Delivery</span></div>
+                <div class="flex flex-col items-center"><i data-lucide="smartphone" class="accent-blue mb-2"></i><span class="text-xs font-bold text-slate-500 uppercase">Mobile Friendly</span></div>
+                <div class="flex flex-col items-center"><i data-lucide="shield-check" class="accent-blue mb-2"></i><span class="text-xs font-bold text-slate-500 uppercase">Affordable</span></div>
+                <div class="flex flex-col items-center"><i data-lucide="search" class="accent-blue mb-2"></i><span class="text-xs font-bold text-slate-500 uppercase">SEO Ready</span></div>
+                <div class="flex flex-col items-center"><i data-lucide="message-circle" class="accent-blue mb-2"></i><span class="text-xs font-bold text-slate-500 uppercase">WhatsApp Sync</span></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 2. SERVICES SECTION -->
+    <main id="services" class="page-section pt-32 pb-20 px-4">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Premium Digital Solutions</h1>
+            <p class="text-slate-500 text-lg">We don't just build websites; we build tools that grow your business.</p>
+        </div>
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-10 rounded-2xl border border-slate-100 shadow-sm">
+                <h3 class="text-2xl font-bold mb-4 accent-blue">Business Website Design</h3>
+                <p class="text-slate-600 leading-relaxed">Professional, multi-page websites that convert visitors into loyal customers.</p>
+            </div>
+            <div class="bg-white p-10 rounded-2xl border border-slate-100 shadow-sm">
+                <h3 class="text-2xl font-bold mb-4 accent-blue">E-commerce Setup</h3>
+                <p class="text-slate-600 leading-relaxed">Secure PayFast/Yoco integrations so you can take payments 24/7.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- 3. PRICING SECTION -->
+    <main id="pricing" class="page-section pt-32 pb-20 px-4">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <h1 class="text-4xl font-bold mb-4 italic">Simple, Transparent Pricing</h1>
+        </div>
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-2xl border border-slate-200">
+                <h3 class="font-bold text-xl mb-2">Starter Package</h3>
+                <div class="text-4xl font-bold mb-6 italic">R3,000</div>
+                <button onclick="showPage('contact')" class="w-full py-3 border border-slate-300 rounded hover:bg-slate-50 transition">Choose Starter</button>
+            </div>
+            <div class="bg-white p-8 rounded-2xl border-2 border-blue-500 relative shadow-xl transform scale-105">
+                <h3 class="font-bold text-xl mb-2">Business Package</h3>
+                <div class="text-4xl font-bold mb-6 italic">R5,000</div>
+                <button onclick="showPage('contact')" class="w-full py-3 bg-accent-blue text-white rounded hover:bg-blue-600 transition">Choose Business</button>
+            </div>
+            <div class="bg-white p-8 rounded-2xl border border-slate-200">
+                <h3 class="font-bold text-xl mb-2">Premium Package</h3>
+                <div class="text-4xl font-bold mb-6 italic">R8,500+</div>
+                <button onclick="showPage('contact')" class="w-full py-3 border border-slate-300 rounded hover:bg-slate-50 transition">Choose Premium</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- 4. PORTFOLIO SECTION -->
+    <main id="portfolio" class="page-section pt-32 pb-20 px-4">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <h1 class="text-4xl font-bold mb-4 italic">Our Success Stories</h1>
+        </div>
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white p-4 rounded-xl shadow-sm cursor-pointer" onclick="openPreview('luxe.html')">
+                <div class="bg-slate-200 aspect-video rounded mb-4 overflow-hidden"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover"></div>
+                <h4 class="font-bold">Luxe Hair & Beauty</h4>
+            </div>
+        </div>
+    </main>
+
+    <!-- 5. ABOUT SECTION -->
+    <main id="about" class="page-section pt-32 pb-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl font-bold mb-8 italic">We Build the Digital Future for SA’s Small Businesses.</h1>
+            <p class="text-slate-600">Every small business in South Africa deserves a world-class online presence without the "big agency" price tag.</p>
+        </div>
+    </main>
+
+    <!-- 6. CONTACT PAGE SECTION -->
+    <main id="contact" class="page-section pt-32 pb-20 px-4">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                <h1 class="text-4xl font-bold mb-4">Let’s Start Your Project.</h1>
+                <p class="text-slate-500 mb-8">Reach out today and have your site live in days.</p>
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center accent-blue"><i data-lucide="mail"></i></div>
+                        <div><p class="font-bold">Email Us</p><p class="text-sm text-slate-500">chiarahleigh14@gmail.com</p></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white p-8 rounded-2xl shadow-xl border border-slate-100">
+                <!-- FORM INTEGRATION (Update your Formspree ID here) -->
+                <form action="https://formspree.io/f/xlgojalz" method="POST" class="space-y-4">
+                    <input type="text" name="full_name" placeholder="Full Name" required class="w-full p-4 bg-slate-50 rounded-lg border focus:outline-none focus:border-blue-500 transition">
+                    
+                    <input type="email" name="email" placeholder="Your Email Address" required class="w-full p-4 bg-slate-50 rounded-lg border focus:outline-none focus:border-blue-500 transition">
+                    
+                    <input type="text" name="business_name" placeholder="Business Name" required class="w-full p-4 bg-slate-50 rounded-lg border focus:outline-none focus:border-blue-500 transition">
+                    
+                    <select name="package_choice" class="w-full p-4 bg-slate-50 rounded-lg border text-slate-500">
+                        <option value="Starter Package">Starter Package (R3,000)</option>
+                        <option value="Business Package">Business Package (R5,000)</option>
+                        <option value="Premium Package">Premium Package (R8,500+)</option>
+                    </select>
+                    
+                    <textarea name="message" placeholder="Tell us about your project" required class="w-full p-4 bg-slate-50 rounded-lg border h-32"></textarea>
+                    
+                    <button type="submit" class="w-full bg-accent-blue text-white font-bold py-4 rounded-lg hover:bg-blue-600 transition">
+                        Submit Request
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- LIVE PREVIEW MODAL -->
+    <div id="preview-modal">
+        <div class="h-[60px] flex items-center justify-between px-6 bg-slate-900 text-white">
+            <span class="text-xs uppercase tracking-widest font-bold">Live Preview Mode</span>
+            <button onclick="closePreview()" class="text-white hover:text-blue-400 flex items-center gap-2 font-bold text-sm uppercase">
+                Close Preview <i data-lucide="x-circle"></i>
+            </button>
+        </div>
+        <iframe id="preview-frame" class="w-full h-[calc(100%-60px)] bg-white" src=""></iframe>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy-bg pt-16 pb-8 px-4 text-slate-400">
+        <div class="max-w-7xl mx-auto border-t border-slate-800 pt-8 text-center text-xs">
+            © 2024 Skyline Web Studio. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Function to toggle the Mobile Menu
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('active');
+            
+            // Toggle between 'menu' and 'x' icon
+            const icon = document.getElementById('menu-icon');
+            const isVisible = menu.classList.contains('active');
+            icon.setAttribute('data-lucide', isVisible ? 'x' : 'menu');
+            lucide.createIcons(); // Re-render icon
+        }
+
+        // Navigation Router
+        function showPage(pageId) {
+            document.querySelectorAll('.page-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+
+        // Portfolio Preview
+        function openPreview(url) {
+            document.getElementById('preview-frame').src = url;
+            document.getElementById('preview-modal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        function closePreview() {
+            document.getElementById('preview-modal').style.display = 'none';
+            document.getElementById('preview-frame').src = "";
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>
