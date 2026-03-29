@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>The Daily Grind | Artisan Coffee & Bakery</title>
+    <style>
+        body { font-family: 'Quicksand', sans-serif; background-color: #fdfbf7; }
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; }
+        .coffee-green { color: #2d4f1e; }
+        .bg-coffee-green { background-color: #2d4f1e; }
+        .border-coffee { border-color: #2d4f1e; }
+    </style>
+</head>
+<body>
+
+    <!-- DEMO HEADER BAR (Agency Return Link) -->
+    <div class="bg-slate-900 text-white text-[10px] md:text-xs py-2 px-4 flex justify-between items-center sticky top-0 z-50">
+        <span class="uppercase tracking-widest opacity-80">Demo Preview: Restaurant Template</span>
+        <a href="index.html" class="bg-white/10 hover:bg-white/20 px-3 py-1 rounded transition">← Back to Skyline Agency</a>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="p-8 text-center bg-white shadow-sm">
+        <h1 class="text-3xl md:text-4xl coffee-green uppercase tracking-tighter font-bold">
+            The Daily <span class="font-light italic lowercase">Grind</span>
+        </h1>
+        <p class="text-[10px] tracking-[0.3em] uppercase mt-2 text-gray-400">Coffee • Bakery • Community</p>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="max-w-5xl mx-auto px-6 py-12">
+        <div class="relative group overflow-hidden rounded-[2rem] shadow-2xl mb-12">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=1200" 
+                 class="h-[400px] md:h-[500px] w-full object-cover transition duration-700 group-hover:scale-105" 
+                 alt="Coffee and Interior">
+            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition duration-500"></div>
+        </div>
+        
+        <div class="text-center max-w-2xl mx-auto">
+            <h2 class="text-4xl md:text-5xl mb-6 coffee-green">Fresh Coffee. <br>Real Food.</h2>
+            <p class="text-gray-500 text-lg mb-10 leading-relaxed">
+                Locally sourced beans and artisanal sourdough served daily from 7 AM. 
+                Our space is designed for slow mornings and productive afternoons.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#menu" class="bg-coffee-green text-white px-10 py-4 rounded-full font-bold hover:shadow-xl transition">View Menu</a>
+                <a href="https://wa.me/27123456789" class="border-2 border-coffee coffee-green px-10 py-4 rounded-full font-bold hover:bg-green-50 transition flex items-center justify-center">
+                    Order via WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section id="menu" class="bg-white py-20 px-6 shadow-inner border-t border-gray-100">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl mb-2 coffee-green italic font-light">Today's Selection</h3>
+                <div class="h-px w-20 bg-gray-200 mx-auto"></div>
+            </div>
+
+            <!-- Menu Category: Coffee -->
+            <div class="mb-16">
+                <h4 class="text-xs uppercase tracking-[0.4em] text-gray-400 mb-8 text-center">The Brew Bar</h4>
+                <div class="space-y-8">
+                    <div class="flex justify-between items-end border-b border-dotted border-gray-300 pb-2">
+                        <div>
+                            <h5 class="font-bold text-lg">Flat White</h5>
+                            <p class="text-sm text-gray-400 italic font-light">Double shot, velvety micro-foam</p>
+                        </div>
+                        <span class="font-bold coffee-green">R32</span>
+                    </div>
+                    <div class="flex justify-between items-end border-b border-dotted border-gray-300 pb-2">
+                        <div>
+                            <h5 class="font-bold text-lg">Cold Brew Rose</h5>
+                            <p class="text-sm text-gray-400 italic font-light">12-hour steep, subtle floral notes</p>
+                        </div>
+                        <span class="font-bold coffee-green">R38</span>
+                    </div>
+                    <div class="flex justify-between items-end border-b border-dotted border-gray-300 pb-2">
+                        <div>
+                            <h5 class="font-bold text-lg">Oat Milk Latte</h5>
+                            <p class="text-sm text-gray-400 italic font-light">Creamy alternative, sugar-free</p>
+                        </div>
+                        <span class="font-bold coffee-green">R42</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Category: Bakery -->
+            <div>
+                <h4 class="text-xs uppercase tracking-[0.4em] text-gray-400 mb-8 text-center">From the Oven</h4>
+                <div class="space-y-8">
+                    <div class="flex justify-between items-end border-b border-dotted border-gray-300 pb-2">
+                        <div>
+                            <h5 class="font-bold text-lg">Smashed Avocado Toast</h5>
+                            <p class="text-sm text-gray-400 italic font-light">Sourdough, feta, chili flakes</p>
+                        </div>
+                        <span class="font-bold coffee-green">R75</span>
+                    </div>
+                    <div class="flex justify-between items-end border-b border-dotted border-gray-300 pb-2">
+                        <div>
+                            <h5 class="font-bold text-lg">Almond Croissant</h5>
+                            <p class="text-sm text-gray-400 italic font-light">Twice-baked, buttery perfection</p>
+                        </div>
+                        <span class="font-bold coffee-green">R45</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFO SECTION -->
+    <section class="py-20 px-6">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            <div>
+                <h4 class="font-bold mb-4 uppercase text-xs tracking-widest text-gray-400">Find Us</h4>
+                <p class="text-gray-600 font-medium">12 Main Road, Melville<br>Johannesburg, 2092</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 uppercase text-xs tracking-widest text-gray-400">Hours</h4>
+                <p class="text-gray-600 font-medium">Mon - Fri: 07:00 — 18:00<br>Sat - Sun: 08:00 — 15:00</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 uppercase text-xs tracking-widest text-gray-400">Social</h4>
+                <p class="text-gray-600 font-medium italic underline">@TheDailyGrindSA</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-50 py-10 text-center border-t border-gray-100">
+        <p class="text-sm text-gray-400">© 2024 The Daily Grind Cafe. All rights reserved.</p>
+        <p class="text-[10px] text-gray-300 mt-2 uppercase tracking-widest">Designed by Skyline Web Studio</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Luxe Hair & Beauty | Sandton</title>
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        h1, h2 { font-family: 'Playfair Display', serif; }
+        .gold-accent { color: #c5a059; }
+        .bg-gold { background-color: #c5a059; }
+    </style>
+</head>
+<body class="bg-[#fffcf9]">
+    <!-- Demo Header Bar -->
+    <div class="bg-slate-900 text-white text-xs py-2 px-4 flex justify-between items-center">
+        <span>DEMO PREVIEW: Beauty Salon Template</span>
+        <a href="index.html" class="underline">Back to Skyline Web Studio</a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="p-6 flex justify-between items-center bg-white shadow-sm">
+        <span class="text-2xl font-bold tracking-widest uppercase">Luxe <span class="gold-accent">&</span> Beauty</span>
+        <button class="bg-gold text-white px-6 py-2 rounded-full text-sm font-semibold uppercase tracking-wider">Book Now</button>
+    </nav>
+
+    <!-- Hero -->
+    <section class="py-20 px-6 text-center bg-[url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1600')] bg-cover bg-center relative">
+        <div class="absolute inset-0 bg-white/70"></div>
+        <div class="relative z-10">
+            <h1 class="text-5xl md:text-7xl mb-4 italic">Experience Elegance</h1>
+            <p class="text-gray-600 max-w-lg mx-auto mb-8 font-light">Premium hair styling and aesthetic treatments in the heart of Sandton.</p>
+            <div class="flex justify-center gap-4">
+                <button class="bg-black text-white px-8 py-3 rounded-full">Our Services</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="py-16 px-6 max-w-6xl mx-auto">
+        <h2 class="text-3xl text-center mb-12">Signature Treatments</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 border border-gray-100 text-center">
+                <h3 class="gold-accent text-xl mb-2">Hair Styling</h3>
+                <p class="text-sm text-gray-500 mb-4">From precision cuts to luxury blowouts.</p>
+                <span class="font-bold">From R450</span>
+            </div>
+            <div class="bg-white p-8 border border-gray-100 text-center">
+                <h3 class="gold-accent text-xl mb-2">Skin Care</h3>
+                <p class="text-sm text-gray-500 mb-4">Advanced facials and organic rejuvenation.</p>
+                <span class="font-bold">From R650</span>
+            </div>
+            <div class="bg-white p-8 border border-gray-100 text-center">
+                <h3 class="gold-accent text-xl mb-2">Nail Art</h3>
+                <p class="text-sm text-gray-500 mb-4">Luxury manicures and gel overlays.</p>
+                <span class="font-bold">From R300</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-10 text-center text-sm">
+        <p>© 2024 Luxe Hair & Beauty Sandton. Built by Skyline Web Studio.</p>
+    </footer>
+</body>
+</html>

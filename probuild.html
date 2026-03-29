@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>Pro-Build SA | Quality Construction</title>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Archivo Black', sans-serif; text-transform: uppercase; }
+        .construction-yellow { color: #facc15; }
+        .bg-construction-yellow { background-color: #facc15; }
+    </style>
+</head>
+<body class="bg-zinc-50">
+    <!-- Demo Header Bar -->
+    <div class="bg-slate-900 text-white text-xs py-2 px-4 flex justify-between items-center">
+        <span>DEMO PREVIEW: Contractor Template</span>
+        <a href="index.html" class="underline">Back to Skyline Web Studio</a>
+    </div>
+
+    <!-- Nav -->
+    <nav class="bg-zinc-900 text-white p-6 flex justify-between items-center">
+        <div class="text-2xl tracking-tighter italic">PRO<span class="construction-yellow">BUILD</span> SA</div>
+        <div class="text-sm font-bold construction-yellow">CALL: 011 456 7890</div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="bg-zinc-900 py-24 px-6 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 relative z-10">
+            <div class="md:w-1/2">
+                <h1 class="text-5xl md:text-6xl text-white leading-none mb-6">Building <span class="construction-yellow">Strength</span> Since 2010.</h1>
+                <p class="text-zinc-400 text-lg mb-8">Residential and commercial construction services across Gauteng. Licensed, insured, and professional.</p>
+                <button class="bg-construction-yellow text-zinc-900 font-bold px-10 py-4 rounded-sm uppercase italic">Request A Quote</button>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=800" class="rounded-lg shadow-2xl grayscale hover:grayscale-0 transition duration-500" alt="Construction site">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-16 px-6 grid grid-cols-1 md:grid-cols-4 gap-1 bg-zinc-200">
+        <div class="bg-white p-8 text-center">
+            <h3 class="text-xl mb-2">Residential</h3>
+            <p class="text-xs text-zinc-500">Custom homes & renovations.</p>
+        </div>
+        <div class="bg-white p-8 text-center border-l border-zinc-100">
+            <h3 class="text-xl mb-2">Commercial</h3>
+            <p class="text-xs text-zinc-500">Retail & office fit-outs.</p>
+        </div>
+        <div class="bg-white p-8 text-center border-l border-zinc-100">
+            <h3 class="text-xl mb-2">Plumbing</h3>
+            <p class="text-xs text-zinc-500">Certified master plumbers.</p>
+        </div>
+        <div class="bg-white p-8 text-center border-l border-zinc-100">
+            <h3 class="text-xl mb-2">Electrical</h3>
+            <p class="text-xs text-zinc-500">Full wiring & solar install.</p>
+        </div>
+    </section>
+
+    <footer class="bg-zinc-900 text-zinc-500 py-12 px-6 text-center">
+        <p>© 2024 Pro-Build SA Construction. A Skyline Web Studio Demo.</p>
+    </footer>
+</body>
+</html>
